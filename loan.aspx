@@ -48,7 +48,7 @@
               <div class="collapse" id="collapseExample">
               <div class="card card-body">
             <select id="topDealSelect">
-                  <option>-</option>
+                  <option value="">-</option>
                   <option value="Ford Transit">Ford Transit</option>
                 </select>	
        
@@ -83,12 +83,7 @@
         <div class="form-group  text-center">
 
                 <button class="btn-attn btn-danger" id="calcloan">Calculate</button>
-            <script type="text/javascript">
-                $("calcloan").click(function (e) {
-                    e.preventDefault();
-                });
-            </script>
-        </div>
+          </div>
         <div class="form-group">
           <label for="payment">Monthly Payment</label>
           <textarea class="form-control" id="inpPayment" rows="1" placeholder="Affordable!"></textarea>

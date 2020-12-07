@@ -13,6 +13,10 @@
     </asp:PlaceHolder>
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+	 integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+	<script src="https://kit.fontawesome.com/572a14277e.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="main.css" />
 
 </head>
 <body>
@@ -38,15 +42,14 @@
         </asp:ScriptManager>
 
 
-    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
       <div class="container-fluid">
-        <a href="/" rel="noopener
-				" class="navbar-brand"><img src="img/mylogo.jpeg" /></a>
+        <a href="/" rel="noopener" class="navbar-brand"><img src="img/mylogo.jpeg" /></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
+          <ul class="nav navbar-nav ml-auto">
             <li class="nav-item active">
               <a href="/index" rel="noopener" class="nav-link">Home</a>
             </li>
@@ -66,17 +69,34 @@
             <li class="nav-item">
               <a href="/loan" class="nav-link" rel="noopener">Loan Calculator</a>
             </li>
+            <asp:LoginView runat="server" ViewStateMode="Disabled">
+             <AnonymousTemplate>
+             <ul class="nav navbar-nav navbar-right">
+              <li><a class="nav-link" runat="server" href="~/Account/Register">Register</a></li>
+              <li><a class="nav-link" runat="server" href="~/Account/Login">Log in</a></li>
+             </ul>
+              </AnonymousTemplate>
+             <LoggedInTemplate>
+              <li><a class="nav-link" runat="server" href="~/Account/Manage" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %> !</a></li>
+             <li>
+               <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
+              </li>
+             </LoggedInTemplate>
+            </asp:LoginView>
+
           </ul>
         </div>
       </div>
     </nav>
     <!-- Navbar -->
-        <div class="container body-content">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+              <asp:ContentPlaceHolder ID="MainContent" runat="server">
+
+
             </asp:ContentPlaceHolder>
-            <hr />
+         <hr />
+   <div class="container body-content">
       <footer>
-                  <div class="container-fluid padding">
+        <div class="container-fluid padding">
         <div class="row text-center" id="contact">
           <div class="col-md-12 center">
             <hr>
@@ -102,11 +122,21 @@
             </table>
           </div>
         </div>
+      </div>   
+      </footer>
       </div>
-      </div>
-    </footer>
        
     </form>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"></script>
+  	<script src="Scripts/build/bundle.js" type="text/javascript"></script>
 </body>
 </html>
 
