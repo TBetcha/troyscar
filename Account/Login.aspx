@@ -4,7 +4,7 @@
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
 
-    <h2 class="text-center"><%: Title %>.</h2>
+    <h2 class="text-center">Login</h2>
 
     <div class="row container-fluid padding">
         <div class="col-md-8">
