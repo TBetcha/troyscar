@@ -37,19 +37,19 @@
     <div class ="container">
        <div class="col-lg-12 col-md-12 col-sm-12">
 
-       <asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#CC9966" BorderStyle="None" BorderWidth="1px" CellPadding="4" Width="502px" DataKeyNames="ID">
+       <asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#CC9966" BorderStyle="None" BorderWidth="1px" CellPadding="4" Width="502px" DataKeyNames="ID" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
         <Columns>
-            <asp:CommandField ShowSelectButton="True" />
-            <asp:BoundField DataField="ID" HeaderText="ID" SortExpression="ID" InsertVisible="False" ReadOnly="True" />
+            <asp:CommandField ShowSelectButton="True" ButtonType="Button" SelectText="Info" />
+            <asp:BoundField DataField="ID" HeaderText="ID" SortExpression="ID" InsertVisible="False" ReadOnly="True" Visible="False" />
             <asp:BoundField DataField="Make" HeaderText="Make" SortExpression="Make" />
             <asp:BoundField DataField="Model" HeaderText="Model" SortExpression="Model" />
             <asp:BoundField DataField="Yr" HeaderText="Yr" SortExpression="Yr" />
-            <asp:BoundField DataField="Color" HeaderText="Color" SortExpression="Color" />
-            <asp:BoundField DataField="Mileage" HeaderText="Mileage" SortExpression="Mileage" />
-            <asp:BoundField DataField="Type" HeaderText="Type" SortExpression="Type" />
-            <asp:BoundField DataField="Location" HeaderText="Location" SortExpression="Location" />
+            <asp:BoundField DataField="Color" HeaderText="Color" SortExpression="Color" Visible="False" />
+            <asp:BoundField DataField="Mileage" HeaderText="Mileage" SortExpression="Mileage" Visible="False" />
+            <asp:BoundField DataField="Type" HeaderText="Type" SortExpression="Type" Visible="False" />
+            <asp:BoundField DataField="Location" HeaderText="Location" SortExpression="Location" Visible="False" />
             <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" />
-           <asp:BoundField DataField="Picture" HeaderText="Picture" SortExpression="Picture" /> 
+           <asp:BoundField DataField="Picture" HeaderText="Picture" SortExpression="Picture" Visible="False" /> 
         </Columns>
         <FooterStyle BackColor="#FFFFCC" ForeColor="#330099" />
         <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="#FFFFCC" />
@@ -68,16 +68,16 @@
            </asp:SqlDataSource>
     <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataSourceID="SqlDataSource2" CellPadding="4" Height="50px" Width="125px" DataKeyNames="ID" >
         <Fields>
-            <asp:BoundField DataField="ID" HeaderText="ID" SortExpression="ID" InsertVisible="False" ReadOnly="True" />
+            <asp:BoundField DataField="ID" HeaderText="ID" SortExpression="ID" InsertVisible="False" ReadOnly="True" Visible="False" />
             <asp:BoundField DataField="Make" HeaderText="Make" SortExpression="Make" />
             <asp:BoundField DataField="Model" HeaderText="Model" SortExpression="Model" />
             <asp:BoundField DataField="Yr" HeaderText="Yr" SortExpression="Yr" />
             <asp:BoundField DataField="Mileage" HeaderText="Mileage" SortExpression="Mileage" />
             <asp:BoundField DataField="Color" HeaderText="Color" SortExpression="Color" />
-            <asp:BoundField DataField="Type" HeaderText="Type" SortExpression="Type" />
+            <asp:BoundField DataField="Type" HeaderText="Type" SortExpression="Type" Visible="False" />
             <asp:BoundField DataField="Location" HeaderText="Location" SortExpression="Location" />
             <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" />
-            <asp:BoundField DataField="Picture" HeaderText="Picture" SortExpression="Picture" />
+            <asp:BoundField DataField="Picture" HeaderText="Picture" SortExpression="Picture" Visible="False" />
                 <asp:TemplateField >
                 <ItemTemplate>
                     <asp:Image ID="Image1" runat="server" ImageUrl='<%# (string) FormatUrl((string)Eval("Picture")) %>' />
