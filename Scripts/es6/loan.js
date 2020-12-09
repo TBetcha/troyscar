@@ -1,9 +1,9 @@
-﻿let inpPrice;
-let inpInterest;
-let inpMonth;
-let inpPayment;
-let topDealsLoan;
-let carList = [];
+﻿var inpPrice;
+var inpInterest;
+var inpMonth;
+var inpPayment;
+var topDealsLoan;
+var carList = [];
 
 const onLoad2 = async (file, list) => {
     await fetch(file).then((response) => {
@@ -78,7 +78,7 @@ $("calcloan").click(function(){
 document.getElementById("inpPrice").addEventListener("change", function () {
     inpPrice = document.getElementById("inpPrice").value;
     inpPrice = parseFloat(inpPrice);
-    if (inpPrice <= 99999999 && inpPrice >= 0 && !isNan(inpPrice)) {
+    if (inpPrice <= 99999999 && inpPrice >= 0 ) {
     } else {
         alert("Please enter a valid price");
     }
