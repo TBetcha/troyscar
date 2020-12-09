@@ -6,7 +6,7 @@ let topDealsLoan;
 let carList = [];
 
 const onLoad2 = async (file, list) => {
-    await  fetch(file).then((response) => {
+    await fetch(file).then((response) => {
         response.json().then(data => {
             topDealsLoan = data.sales;
             list = list.concat(data.sales.Listing.Car, data.sales.Listing.SUV, data.sales.Listing.Truck, data.sales.Listing.Van);
@@ -16,7 +16,7 @@ const onLoad2 = async (file, list) => {
             return list;
         });
     });
-});
+};
 
 // use index to retireve results later
 const populateList = (list) => {
@@ -98,4 +98,4 @@ document.getElementById("inpMonth").addEventListener("change", function () {
     inpMonth = parseFloat(inpMonth);
 });
 
-onLoad2('../../deals.json', carList);
+onLoad2('../../deals.js', carList);

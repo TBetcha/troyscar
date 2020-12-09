@@ -33,6 +33,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -187,7 +188,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Account\Web.config" />
     <Content Include="deals.aspx" />
-    <Content Include="deals.json" />
+    <Content Include="deals.js" />
     <Content Include="index.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="img\benzamg.jpg" />

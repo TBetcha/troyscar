@@ -1,10 +1,30 @@
 {
   "sales": {
     "Listing": {
-      "Car": ["Audi A6", "Jaguar XKR", "Lincoln MKZ", "Mercedes AMG C 43"],
-      "SUV": ["Land Rover Range Rover", "Ford Expedition", "GMC Yukon", "BMW X5"],
-      "Truck": ["Toyota Tacoma", "Ford F-150", "Ford F-150 Raptor", "Dodge Ram"],
-      "Van": ["Ford Transit", "Ford E-350", "Mercedes-Benz Sprinter", "Dodge ProMaster"]
+      "Car": [
+        "Audi A6",
+        "Jaguar XKR",
+        "Lincoln MKZ",
+        "Mercedes AMG C 43"
+      ],
+      "SUV": [
+        "Land Rover Range Rover",
+        "Ford Expedition",
+        "GMC Yukon",
+        "BMW X5"
+      ],
+      "Truck": [
+        "Toyota Tacoma",
+        "Ford F-150",
+        "Ford F-150 Raptor",
+        "Dodge Ram"
+      ],
+      "Van": [
+        "Ford Transit",
+        "Ford E-350",
+        "Mercedes-Benz Sprinter",
+        "Dodge ProMaster"
+      ]
     },
     "Details": {
       "Car": {
