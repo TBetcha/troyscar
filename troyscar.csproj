@@ -188,7 +188,8 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Account\Web.config" />
     <Content Include="deals.aspx" />
-    <Content Include="deals.js" />
+    <Content Include="map.aspx" />
+    <None Include="deals.json" />
     <Content Include="index.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="img\benzamg.jpg" />
@@ -248,6 +249,7 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\es6\app.js" />
     <Content Include="Scripts\es6\loan.js" />
+    <Content Include="Scripts\es6\map.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
@@ -459,6 +461,13 @@
     </Compile>
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="map.aspx.cs">
+      <DependentUpon>map.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="map.aspx.designer.cs">
+      <DependentUpon>map.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />

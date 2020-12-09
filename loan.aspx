@@ -11,6 +11,7 @@
       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
     <script src="https://kit.fontawesome.com/572a14277e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="main.css" />
+         <script src="Scripts/es6/loan.js" type="text/javascript"></script>
     <title>Troy's Car Shop</title>
   </head>
 
@@ -37,7 +38,7 @@
     <div class="container-fluid padding">
       <div class="row padding">
         <div class="col-lg-8 col-md-8 m-auto">
-          <form id="loan-form">
+          <div id="loan-form">
             <a class="btn-attn btn-danger" data-toggle="collapse" href="#collapseExample" role="button"
               aria-expanded="false" aria-controls="collapseExample">
               <div class="form-group">
@@ -80,7 +81,7 @@
             <option value="72">72</option>
           </select>
         </div>
-        <div class="form-group  text-center">
+        <div class="text-center">
 
                 <button class="btn-attn btn-danger" id="calcloan">Calculate</button>
           </div>
@@ -88,7 +89,7 @@
           <label for="payment">Monthly Payment</label>
           <textarea class="form-control" id="inpPayment" rows="1" placeholder="Affordable!"></textarea>
         </div>
-        </form>
+        </div>
       </div>
       <hr>
     </div>
@@ -124,7 +125,7 @@
       integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
       crossorigin="anonymous"></script>
     	<script src="Scripts/es6/loan.js" type="text/javascript"></script>
-	 <script src="deals.json"></script>
+	 <script src="deals.js"></script>
   </body>
 
 </html>

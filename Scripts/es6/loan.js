@@ -52,12 +52,13 @@ document.getElementById("loan-form").addEventListener("change", function () {
 
 const calculatePayment = () => {
     // I = PRT -> I + P
-    preventDefault();
-    let regInt = inpInterest;
+    console.log('does it work?')
+     let regInt = inpInterest;
     let temp = inpPrice * inpInterest;
     inpPayment = temp + inpPrice;
     inpPayment = inpPayment / inpMonth;
     inpPayment = inpPayment.toFixed(2);
+    alert(`Your payment would be ${inpPayment}`)
 
     if (!isNaN(inpPayment)){
         $("#inpPayment").text(`Payment: $${inpPayment}`);
@@ -68,8 +69,10 @@ const calculatePayment = () => {
 };
 
 document.getElementById("calcloan").addEventListener("click", calculatePayment);
-$("calcloan").click(function (event) {
-    event.preventDefault();
+
+
+$("calcloan").click(function(){
+    calculatePayment();      
 });
 
 document.getElementById("inpPrice").addEventListener("change", function () {
@@ -98,4 +101,4 @@ document.getElementById("inpMonth").addEventListener("change", function () {
     inpMonth = parseFloat(inpMonth);
 });
 
-onLoad2('../../deals.js', carList);
+onLoad2('../../deals.json', carList);
