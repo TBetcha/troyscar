@@ -29,10 +29,14 @@
                     <dt>Phone:</dt>
                     <dd>
                         <asp:HyperLink NavigateUrl="/Account/ManagePhone" Text="[Change]" Visible="true" ID="ChangePhone" runat="server" />
-                        <asp:HyperLink NavigateUrl="/Account/ManageAddress" Text="[Create]" Visible="false" ID="ChangeAddress" runat="server" />
                     </dd>
 
+                        <dt>Address:</dt>
+                    <dd>
+                        <asp:HyperLink NavigateUrl="/Account/ManageAddress" Text="[Change]" Visible="true" ID="ChangeAddress" runat="server" />
+                    </dd>
 
+                <!--
                     <dt>External Logins:</dt>
                     <dd><%: LoginsCount %>
                         <asp:HyperLink NavigateUrl="/Account/ManageLogins" Text="[Manage]" runat="server" />
@@ -61,7 +65,6 @@
                     </dd>
                     <% } %>
                     --%>
-
                     <dt>Two-Factor Authentication:</dt>
                     <dd>
                         <p>
@@ -83,6 +86,7 @@
                         --%>
                         <% } %>
                     </dd>
+                        -->
                 </dl>
             </div>
         </div>

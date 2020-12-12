@@ -74,6 +74,7 @@ namespace carshop.Account
                         : message == "RemoveLoginSuccess" ? "The account was removed."
                         : message == "AddPhoneNumberSuccess" ? "Phone number has been added"
                         : message == "RemovePhoneNumberSuccess" ? "Phone number was removed"
+                       : message == "AddAddressSuccess" ? "Address was changed"
                         : String.Empty;
                     successMessage.Visible = !String.IsNullOrEmpty(SuccessMessage);
                 }

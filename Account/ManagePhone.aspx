@@ -25,7 +25,7 @@
                     </div>
                     <div class="form-group">
                         <div class="col-md-offset-2 col-md-10">
-                            <asp:Button runat="server" Text="Set Phone" ValidationGroup="SetPhone" OnClick="SetPhone_Click" CssClass="btn btn-default ml-2" />
+                            <asp:Button runat="server" Text="Set Phone" ValidationGroup="SetPhone" OnClick="SetPhone_Click" CssClass="btn-attn btn-danger ml-2" />
                         </div>
                     </div>
             </asp:PlaceHolder>
