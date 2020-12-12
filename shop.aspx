@@ -1,7 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="shop.aspx.cs" Inherits="carshop.shop" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-
-
     <!DOCTYPE html>
 <html>
   <head>
@@ -21,7 +19,6 @@
         <hr class="my-4">
         </div>
     </div>
-
     <!--Select -->
  	<div class="container-fluid text-center">
         <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True">
@@ -37,7 +34,8 @@
     <div class ="container">
        <div class="col-lg-12 col-md-12 col-sm-12 content-align-center">
 
-       <asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#CC9966" BorderStyle="None" BorderWidth="1px" CellPadding="4" Width="502px" DataKeyNames="ID" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+                   <asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#CC9966" BorderStyle="None" BorderWidth="1px" CellPadding="4" Width="502px" DataKeyNames="ID" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+               
         <Columns>
             <asp:CommandField ShowSelectButton="True" ButtonType="Button" SelectText="Info" />
             <asp:BoundField DataField="ID" HeaderText="ID" SortExpression="ID" InsertVisible="False" ReadOnly="True" Visible="False" />
@@ -61,6 +59,9 @@
         <SortedDescendingCellStyle BackColor="#F6F0C0" />
         <SortedDescendingHeaderStyle BackColor="#7E0000" />
     </asp:GridView>
+           <asp:UpdatePanel ID="UpdatePanel1" runat="server"> 
+               <ContentTemplate>
+
            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" SelectCommand="SELECT [ID], [Make], [Model], [Yr], [Mileage], [Color], [Type], [Location], [Price], [Picture] FROM [Sales] WHERE ([Type] = ?)">
                <SelectParameters>
                    <asp:ControlParameter ControlID="DropDownList1" DefaultValue="Car" Name="Type" PropertyName="SelectedValue" Type="String" />
@@ -96,6 +97,9 @@
            </asp:SqlDataSource>
              </div> 
  </div>
+               </ContentTemplate>
+</asp:UpdatePanel>
+
 
     <!--Gridview -->
 
@@ -116,6 +120,11 @@
     <script src="app.js"></script>
 </body>
 </html>
+
+
+
+</div>
+    </div>
 
 
 

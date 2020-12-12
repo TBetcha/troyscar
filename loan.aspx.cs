@@ -14,8 +14,8 @@ namespace carshop
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            /*
-
+            
+  /*
             if (!IsPostBack)
             {
                 string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\troyboettger\source\repos\troyscar\App_Data\Carshop.accdb;";
@@ -38,9 +38,46 @@ namespace carshop
                     Sales.DataValueField = "Price"; // Value Field
                     Sales.DataTextField = "Model"; // Text field which will be show in UI
                     Sales.DataBind();
+                    var thePrice = Sales.DataValueField;
+                    inputPrice.Text = thePrice.ToString();
+                    inputPrice.DataBind();
                 }
             }
             */
+
+
+        }
+
+        protected double getPayment()
+        {
+            int realPrice;
+
+            int pricee;
+            if(Int32.TryParse(inputPrice.Text, out pricee)){
+                realPrice = pricee;
+                
+            }
+
+            int realLen;
+            int lenn;
+            if (Int32.TryParse(interestLen.Text, out lenn))
+            {
+                realLen = lenn;
+            }
+
+            int realInterest;
+            int intt;
+            if (Int32.TryParse(inputInterest.Text, out intt))
+            {
+                realInterest = intt;
+            }
+            int monthly = (int) (pricee * intt);
+
+            var totBill = (double)(pricee + monthly);
+            var bill = (int)(totBill / lenn);
+            Response.Write("$" + bill + ".00");
+            return bill;
+
         }
     }
 }

@@ -37,6 +37,7 @@
       <div class="row padding">
         <div class="col-lg-8 col-md-8 m-auto">
           <div id="loan-form">
+       <!--  
             <a class="btn-attn btn-danger" data-toggle="collapse" href="#collapseExample" role="button"
               aria-expanded="false" aria-controls="collapseExample">
               <div class="form-group">
@@ -46,30 +47,50 @@
             <br>
               <div class="collapse" id="collapseExample">
               <div class="card card-body">
-            <select id="topDealSelect">
+           <select id="topDealSelect">
                   <option value="">-</option>
                   <option value="Ford Transit">Ford Transit</option>
-                </select>	
+                </select>
        
-             <!--  			<asp:DropDownList ID="Sales" runat="server">
+             	<asp:DropDownList ID="Sales" runat="server">
 				<asp:ListItem>Car</asp:ListItem>
 				<asp:ListItem>Truck</asp:ListItem>
 				<asp:ListItem>Van</asp:ListItem>
-			</asp:DropDownList>	-->
+			</asp:DropDownList>	
 	
               </div>
             </div>
+           -->
             <div class="form-group">
               <label for="price">Price</label>
-              <input type="number" class="form-control" id="inpPrice" value="">
-            </div>
+          <!--    <input type="number" class="form-control" id="inpPrice" value="">    -->
+                <asp:TextBox ID="inputPrice" TextMode="Number" runat="server">
+                    <p></p>
+                </asp:TextBox>
+
+                   </div>
             <div class="form-group">
               <label for="interest">Interest</label>
-              <input type="text" class="form-control" id="inpInterest" value="">
+       <!--       <input type="text" class="form-control" id="inpInterest" value="">          -->
+                <asp:TextBox ID="inputInterest" runat="server" ></asp:TextBox>
             </div>
         </div>
         <div class="form-group">
           <label for="month">Month Term</label>
+
+            <asp:DropDownList ID="interestLen" runat="server" TextMode="Number">
+
+                <asp:ListItem>12</asp:ListItem>
+				<asp:ListItem>24</asp:ListItem>
+				<asp:ListItem>36</asp:ListItem>
+				<asp:ListItem>48</asp:ListItem>
+				<asp:ListItem>60</asp:ListItem>
+				<asp:ListItem>72</asp:ListItem>
+
+            </asp:DropDownList>
+
+
+<!--
           <select multiple class="form-control" id="inpMonth">
             <option value="12">12</option>
             <option value="24">24</option>
@@ -78,14 +99,16 @@
             <option value="60">60</option>
             <option value="72">72</option>
           </select>
+    -->
         </div>
-        <div class="text-center">
+        <div class="ml-4 pl-4">
 
                 <button class="btn-attn btn-danger" id="calcloan">Calculate</button>
           </div>
         <div class="form-group">
           <label for="payment">Monthly Payment</label>
-          <textarea class="form-control" id="inpPayment" rows="1" placeholder="Affordable!"></textarea>
+                 <h3><% getPayment(); %></h3>
+   <!--       <textarea class="form-control" id="inpPayment" rows="1" placeholder="Affordable!"></textarea>  -->
         </div>
         </div>
       </div>
