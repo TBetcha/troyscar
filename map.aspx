@@ -1,8 +1,10 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="map.aspx.cs" Inherits="carshop.map" %>
+﻿<%@ Page Title="Contact" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="map.aspx.cs" Inherits="carshop.map" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
+		   <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link
 			rel="stylesheet"
 			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -14,9 +16,13 @@
 		<title>Troy's Car Shop - Find Us</title>
 	</head>
 	<body>
+        <div class="pt-10 m-auto">
+
 		<div class="container-fluid padding text-center">
-			<h1>You don't have to do this alone</h1>
+			<h1 class=" pt-3 diplay-1 font-weight-bolder" >You don't have to do this alone...</h1>
+			<h1 class=" pt-3 pb-5 diplay-1 text-danger font-weight-bolder" >Come in and visit our team today!</h1>
 		</div>
+        </div>
 
 		<div class="container-fluid padding">
 			<div class="row padding justify-content-center">
@@ -25,12 +31,14 @@
 				</div>
 			</div>
 		</div>
+		<!--
 		<div class="col-lg-12 col-md-12 text-center m-auto">
 			<h3>Find the closest office to you</h3>
 			<h4>Enter your address</h4>
 			<input id="usrAdd" type="text" />
-			<button onClick="getUserAddress()">Submit me brody</button>
+			<button onClick="getUserAddress()">Submit</button>
 		</div>
+		-->
 		<script
 			src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
 			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -46,10 +54,7 @@
 			integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
 			crossorigin="anonymous"
 		></script>
-		<script src="Scripts/es6/map.js"></script>
-
-
-	</body>
+		</body>
 </html>
 
 </asp:Content>

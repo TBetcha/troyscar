@@ -5,6 +5,8 @@ var inpPayment;
 var topDealsLoan;
 var carList = [];
 
+/*
+
 const onLoad2 = async (file, list) => {
     await fetch(file).then((response) => {
         response.json().then(data => {
@@ -14,6 +16,24 @@ const onLoad2 = async (file, list) => {
             //allocate selection of vehicles
             populateList(list);
             return list;
+        });
+    });
+};
+
+*/
+
+async function getIt2(file, list) {
+    await fetch(file).then((response) => {
+        response.json().then((data) => {
+            topDealsLoan = data.sales
+            list = list.concat(
+                data.sales.Listing.Car,
+                data.sales.Listing.SUV,
+                data.sales.Listing.Truck,
+                data.sales.Listing.Van
+            )
+            populateList(list)
+            return list
         });
     });
 };
@@ -37,7 +57,7 @@ const populateList = (list) => {
     })
 };
 
-    document.querySelector('#topDealSelect').addEventListener('change', function () {
+    document.querySelector("#topDealSelect").addEventListener('click', function () {
         let vehPrice = $("#topDealSelect").val();
         $("inpPrice").val(vehPrice);
         document.getElementById('inpPrice').value = vehPrice;
@@ -46,7 +66,8 @@ const populateList = (list) => {
 
 
 
-document.getElementById("loan-form").addEventListener("change", function () {
+document.getElementById("loan-form").addEventListener("click", function (event) {
+    event.preventDefault();
     return;
   });
 
@@ -101,4 +122,4 @@ document.getElementById("inpMonth").addEventListener("change", function () {
     inpMonth = parseFloat(inpMonth);
 });
 
-onLoad2('../../deals.json', carList);
+getIt2('../../deals.json', carList);

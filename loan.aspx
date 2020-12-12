@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="loan.aspx.cs" Inherits="carshop.loan" %>
+﻿<%@ Page Title="Loan" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="loan.aspx.cs" Inherits="carshop.loan" Async="true"  %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
   <!DOCTYPE html>
@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
     <script src="https://kit.fontawesome.com/572a14277e.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="main.css" />
-         <script src="Scripts/es6/loan.js" type="text/javascript"></script>
     <title>Troy's Car Shop</title>
   </head>
 
@@ -63,7 +61,7 @@
             </div>
             <div class="form-group">
               <label for="price">Price</label>
-              <input type="number" class="form-control" id="inpPrice" value="inpPrice">
+              <input type="number" class="form-control" id="inpPrice" value="">
             </div>
             <div class="form-group">
               <label for="interest">Interest</label>
@@ -124,8 +122,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
       integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
       crossorigin="anonymous"></script>
-    	<script src="~/Scripts/es6/loan.js" type="text/javascript"></script>
-	 <script src="~/deals.js"></script>
+        <script type="application/json" src="<%= ResolveUrl("deals.json") %>"></script>
+        <script type="text/javascrupt" src="<%= ResolveUrl("~/Scripts/es6/loan.js") %>"></script>
   </body>
 
 </html>

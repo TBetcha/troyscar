@@ -1,7 +1,6 @@
 ﻿/** @format */
 var custAdd
-var myKey  
-
+var myKey;
 function makeMap() {
 	; (map = new google.maps.Map(document.getElementById('googleMap'), {
 		center: {

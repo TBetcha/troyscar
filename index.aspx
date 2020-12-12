@@ -133,7 +133,7 @@
             <div class="card-body">
               <h4 class="card-title">New Cars</h4>
               <p>Our new car inventory currently has over 27,000 vehicles listed</p>
-              <a href="https://github.com/TBetcha" rel="noopener" class="btn-danger btn-attn">Shop</a>
+              <a href="/shop" rel="noopener" class="btn-danger btn-attn">Shop</a>
             </div>
           </div>
         </div>
@@ -144,7 +144,7 @@
             <div class="card-body">
               <h4 class="card-title">Certified Used Cars</h4>
               <p>Top notch quality certified used vehicles</p>
-              <a href="https://github.com/TBetcha" class="btn-danger btn-attn">Shop</a>
+              <a href="/shop" class="btn-danger btn-attn">Shop</a>
             </div>
           </div>
         </div>
@@ -155,7 +155,7 @@
             <div class="card-body">
               <h4 class="card-title">Used Cars</h4>
               <p>Used car price with a new car feeling</p>
-              <a href="https://github.com/TBetcha" class="btn-danger btn-attn">Shop</a>
+              <a href="/shop" class="btn-danger btn-attn">Shop</a>
             </div>
           </div>
         </div>
